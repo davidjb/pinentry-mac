@@ -17,6 +17,10 @@ We'll try to get this [pinentry-mac edition into homebrew](https://github.com/ma
 
 Please file them in the [Issue Tracker](https://github.com/massar/pinentry-mac/issues)
 
+# Code License
+
+As the original license for the 'pinentry' program where 'pinentry-mac' was derived from is GPLv2 (this code is of course also GPLv2](https://github.com/massar/pinentry-mac/blob/master/COPYING).
+
 # Installation
 
 Following are the steps to get this all working.
