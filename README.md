@@ -104,6 +104,7 @@ max-cache-ttl 999999
 enable-ssh-support
 pinentry-program=GITPATH/pinentry-mac/build/Release/pinentry-mac.app/Contents/MacOS/pinentry-mac
 HERE
+```
 
 Now, reboot (because of launchd and environment vars).
  
