@@ -13,6 +13,10 @@ Due to homebrew you'll always have an up to date gnupg2.
 
 We'll try to get this [pinentry-mac edition into homebrew](https://github.com/massar/pinentry-mac/issues/1) along with an [installer script](https://github.com/massar/pinentry-mac/issues/2) to make things easier.
 
+# Bugs / patches etc
+
+Please file them in the [Issue Tracker](https://github.com/massar/pinentry-mac/issues)
+
 # Installation
 
 Following are the steps to get this all working.
