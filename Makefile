@@ -2,13 +2,8 @@ PROJECT = pinentry-mac
 TARGET = pinentry-mac
 PRODUCT = pinentry-mac.app
 CONFIG = Release
-MAKE_DEFAULT = Dependencies/GPGTools_Core/newBuildSystem/Makefile.default
 
--include $(MAKE_DEFAULT)
-
-.PRECIOUS: $(MAKE_DEFAULT)
-$(MAKE_DEFAULT):
-	@bash -c "$$(curl -fsSL https://raw.github.com/GPGTools/GPGTools_Core/master/newBuildSystem/prepare-core.sh)"
+all: $(PRODUCT)
 
 init: $(MAKE_DEFAULT)
 
