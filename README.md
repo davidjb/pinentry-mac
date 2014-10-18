@@ -1,22 +1,30 @@
 # Pinentry MAC / OSX
 
-(This)[https://github.com/massar/pinentry-mac] is, obviously, a very quick fork of GPGTools/pinentry-mac.
+[This](https://github.com/massar/pinentry-mac) is, obviously, a very quick fork of GPGTools/pinentry-mac.
 
 pinentry-mac is the only component one needs to get a working combination of:
  * [Apple OS X Yosemite (10.10)](http://www.apple.com)
  * [Thunderbird](https://www.mozilla.org/thunderbird/)
- * [Enigmail](<a href="https://www.enigmail.net)
+ * [Enigmail](https://www.enigmail.net)
  * [Homebrew](http://brew.sh/)'s [version](https://github.com/Homebrew/homebrew/blob/master/Library/Formula/gnupg2.rb) of [GnuPG2](https://www.gnupg.org/)
 
 Without the need for GPGSuite/MacPGP and other such things.
 Due to homebrew you'll always have an up to date gnupg2.
-And we'll try to get this pinentry-mac edition into homebrew along with an installer script.
+
+We'll try to get this [pinentry-mac edition into homebrew](https://github.com/massar/pinentry-mac/issues/1) along with an [installer script](https://github.com/massar/pinentry-mac/issues/2) to make things easier.
 
 # Installation
+
+Following are the steps to get this all working.
 
 # Homebrew
 
 Follow instructions on http://brew.sh
+
+Effectively:
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 # gnupg2 + gpg-agent
 
