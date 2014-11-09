@@ -1,3 +1,7 @@
+NOTE: While the repo contains a fork of the original GPGTools/pinentry-mac, the instructions below use the
+[homebrew cask](https://github.com/Homebrew/homebrew/blob/master/Library/Formula/pinentry-mac.rb) which thus uses the original repository code.
+As there is no real code change, that is perfect. This repo remains for the instructions on setting it up (and in case the GPGTools edition disappears due to their licensing plans)
+
 # Pinentry MAC / OSX
 
 [This](https://github.com/massar/pinentry-mac) is, obviously, a very quick fork of GPGTools/pinentry-mac.
@@ -11,7 +15,7 @@ pinentry-mac is the only component one needs to get a working combination of:
 Without the need for GPGSuite/MacPGP and other such things.
 Due to homebrew you'll always have an up to date gnupg2.
 
-We'll try to get this [pinentry-mac edition into homebrew](https://github.com/massar/pinentry-mac/issues/1) along with an [installer script](https://github.com/massar/pinentry-mac/issues/2) to make things easier.
+Possible [installer script](https://github.com/massar/pinentry-mac/issues/2) to make things easier might follow.
 
 # Bugs / patches etc
 
@@ -34,20 +38,12 @@ Effectively:
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-# gnupg2 + gpg-agent
+# gnupg2 + gpg-agent + pinentry-mac
 
+Just run the following to install these
 ```
-brew install gnupg2 gpg-agent
+brew install gnupg2 gpg-agent pinentry-mac
 ```
-
-# pinentry-mac
-
-* Install Xcode from the Appstore
-* git clone https://github.com/massar/pinentry-mac.git
-* cd pinentry-mac
-* make
-
-You'll now have a pinentry-mac binary! :)
 
 ## Autostart gpg-agent
 
@@ -134,7 +130,7 @@ As all the pieces are there, Enigmail should autodetect gnupg2; the environment 
 
 # What is different from the GPGSuite edition?
 
-Basically only a minorly stripped Makefile, for the rest nothing yet. See the [https://github.com/massar/pinentry-mac/commits/master](commits) for details.
+You only get pinentry-mac from it.
 
-Of course you don't get the GPGSuite functions, but for usage on the commandline or inside Enigmail that is not needed.
+Thus you do not get the rest of the GPGSuite functions, but for usage on the commandline (for decrypt/encrypt) or inside Enigmail that is not needed.
 
