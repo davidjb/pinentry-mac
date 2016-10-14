@@ -1,15 +1,12 @@
 PROJECT = pinentry-mac
 TARGET = pinentry-mac
-PRODUCT = pinentry-mac.app
+PRODUCT = build/Release/pinentry-mac.app/Contents/MacOS/pinentry-mac
 CONFIG = Release
 
 all: $(PRODUCT)
 
-init: $(MAKE_DEFAULT)
+$(PRODUCT): Source/* Source/pinentry-current/* Source/pinentry-current/*/* Resources/* Resources/*/* pinentry-mac.xcodeproj
+	xcodebuild -project $(PROJECT).xcodeproj -target $(TARGET) -configuration $(CONFIG) build $(XCCONFIG)
 
-$(PRODUCT): *.m pinentry-mac.xcodeproj
-	@xcodebuild -project $(PROJECT).xcodeproj -target $(TARGET) -configuration $(CONFIG) build $(XCCONFIG)
-
-compile_with_ppc:
-	@xcodebuild -project $(PROJECT).xcodeproj -target $(TARGET) -configuration "$(CONFIG) with ppc" build $(XCCONFIG)
-
+clean:
+	rm -rf ./build
