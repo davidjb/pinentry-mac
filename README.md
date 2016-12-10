@@ -106,7 +106,7 @@ echo >~/.gnupg/gpg-agent.conf <<HERE
 default-cache-ttl 600
 max-cache-ttl 999999
 enable-ssh-support
-pinentry-program=GITPATH/pinentry-mac/build/Release/pinentry-mac.app/Contents/MacOS/pinentry-mac
+pinentry-program GITPATH/pinentry-mac/build/Release/pinentry-mac.app/Contents/MacOS/pinentry-mac
 HERE
 ```
 
